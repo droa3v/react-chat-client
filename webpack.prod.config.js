@@ -40,6 +40,7 @@ module.exports = {
               sourceMap: false,
             },
           },
+          "postcss-loader",
           {
             loader: "sass-loader",
             options: {
@@ -54,6 +55,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
+          "postcss-loader",
           {
             loader: "sass-loader",
             options: {
