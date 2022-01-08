@@ -1,12 +1,15 @@
 import React from "react";
 import { Button } from "../../components/Button/Button";
-import { MessageInput } from "../../components/Fields/MessageInput";
 
-export const ChatInput = () => {
+export const ChatInput: React.FC = (): JSX.Element => {
   return (
     <div>
-      <MessageInput />
-      <Button />
+      <input
+        type="text"
+        name="MessageInput"
+        placeholder="Type your message here..."
+      />
+      <Button>Submit</Button>
     </div>
   );
 };

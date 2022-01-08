@@ -1,9 +1,19 @@
 import React from "react";
 
-export const Button = () => {
+interface ButtonProps {
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  children?: React.ReactNode;
+  disabled?: boolean;
+}
+
+export const Button: React.FC<ButtonProps> = ({
+  onClick,
+  children,
+  disabled,
+}): JSX.Element => {
   return (
-    <React.Fragment>
-      <button type="submit">Submit</button>
-    </React.Fragment>
+    <button onClick={onClick} disabled={disabled} className="">
+      {children}
+    </button>
   );
 };
