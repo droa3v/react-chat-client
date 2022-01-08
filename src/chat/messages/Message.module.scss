@@ -1,0 +1,53 @@
+@use "../../scss/variables";
+
+@mixin message {
+  margin: 40px;
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: auto;
+}
+
+.myMessage {
+  @include message();
+  background-color: variables.$blue;
+  align-self: flex-end;
+}
+
+.inMessage {
+  @include message();
+  background-color: variables.$green;
+  align-self: flex-start;
+}
+
+.textContainer {
+  padding: 1em;
+  text-align: left;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+.tailRight:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: 0px;
+  bottom: -20px;
+  border: 12px solid;
+  border-color: variables.$blue variables.$blue transparent transparent;
+}
+
+.tailLeft:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  right: auto;
+  top: auto;
+  bottom: -20px;
+  border: 22px solid;
+  border-color: transparent transparent transparent variables.$green;
+}
