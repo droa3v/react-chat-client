@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Button.module.scss";
 
 interface ButtonProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -12,7 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
 }): JSX.Element => {
   return (
-    <button onClick={onClick} disabled={disabled} className="">
+    <button onClick={onClick} disabled={disabled} className={styles.btn}>
       {children}
     </button>
   );

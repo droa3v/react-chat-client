@@ -26,10 +26,44 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.module\.s(a|c)ss$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true,
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.s(a|c)ss$/,
+        exclude: /\.module.(s(a|c)ss)$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", ".scss"],
   },
   plugins: [
     new HtmlWebpackPlugin({
