@@ -355,3 +355,8 @@ template {
 html {
   font-family: variables.$Inter;
 }
+
+.appContainer {
+  display: flex;
+  justify-content: space-between;
+}
