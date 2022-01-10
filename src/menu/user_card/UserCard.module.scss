@@ -1,0 +1,31 @@
+@use "../../scss/variables";
+
+.container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  .avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    font-family: variables.$Nunito;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+  }
+
+  .email {
+    text-align: center;
+    font-family: variables.$Montserrat;
+    color: gray;
+    font-size: 400;
+  }
+}
