@@ -1,5 +1,11 @@
 import React from "react";
+import { Chat } from "./chat/Chat";
+import "./scss/App.scss";
 
-export const App = () => {
-  return <div>Chat</div>;
+export const App: React.FC = (): JSX.Element => {
+  return (
+    <div>
+      <Chat />
+    </div>
+  );
 };

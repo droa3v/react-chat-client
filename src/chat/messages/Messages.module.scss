@@ -1,0 +1,7 @@
+@use "../../scss/variables";
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  background-color: variables.$gray;
+}
