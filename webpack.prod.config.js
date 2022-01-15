@@ -62,6 +62,10 @@ module.exports = {
               sourceMap: false,
             },
           },
+          {
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: "asset/resource",
+          },
         ],
       },
     ],
