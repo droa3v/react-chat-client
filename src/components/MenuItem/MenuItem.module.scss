@@ -1,0 +1,46 @@
+@use "../../scss/variables";
+
+.container {
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem 0;
+  font-family: variables.$OpenSans;
+  font-size: 1rem;
+  line-height: 19px;
+  font-weight: 700;
+  color: variables.$gray;
+  transition-duration: 0.3s;
+  .icon {
+    width: 16px;
+    height: auto;
+    padding: 0 2rem;
+    transition-duration: 0.15s;
+    color: variables.$gray;
+  }
+
+  &:hover:before,
+  .active:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background-color: variables.$active;
+    box-shadow: 1px 0px 10px rgba(variables.$active, 0.45),
+      0px 0px 10px rgba(variables.$active, 0.55),
+      4px 0px 25px rgba(variables.$active, 0.75);
+    border-radius: 3px;
+  }
+
+  &:hover,
+  .active {
+    color: variables.$active;
+    .icon {
+      color: variables.$active;
+    }
+  }
+}

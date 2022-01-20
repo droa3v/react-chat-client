@@ -5,6 +5,9 @@ interface ButtonProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children?: React.ReactNode;
   disabled?: boolean;
+  rounded?: boolean;
+  className?: string;
+  secondary?: boolean;
 }
 
 interface ICoords {
@@ -16,6 +19,9 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   children,
   disabled,
+  rounded,
+  secondary,
+  className,
 }): JSX.Element => {
   const [coords, setCoords] = useState<ICoords>({ x: -1, y: -1 });
   const [isRippling, setIsRippling] = useState<boolean>(false);
@@ -39,7 +45,9 @@ export const Button: React.FC<ButtonProps> = ({
         onClick && onClick(e);
       }}
       disabled={disabled}
-      className={styles.btn}
+      className={`${styles.btn} ${rounded ? styles.rounded : null}
+      ${secondary ? styles.secondary : styles.primary}
+      ${className}`}
     >
       {isRippling ? (
         <span
@@ -50,7 +58,7 @@ export const Button: React.FC<ButtonProps> = ({
           }}
         />
       ) : null}
-      <span className={styles.content}>{children}</span>
+      <div className={styles.content}>{children}</div>
     </button>
   );
 };

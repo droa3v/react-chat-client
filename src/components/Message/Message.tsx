@@ -1,4 +1,6 @@
 import React from "react";
+import { Avatar } from "../Avatar/Avatar";
+import img from "../../img/image.jpeg";
 import styles from "./Message.module.scss";
 
 interface MessageProps {
@@ -11,12 +13,9 @@ export const Message: React.FC<MessageProps> = ({
   children,
 }): JSX.Element => {
   return (
-    <div className={`${my ? styles.myMessage : styles.inMessage}`}>
-      <div
-        className={`${styles.textContainer} ${
-          my ? styles.tailRight : styles.tailLeft
-        }`}
-      >
+    <div className={`${my ? styles.myContainer : styles.inContainer}`}>
+      {my ? null : <Avatar src={img} size="md" />}
+      <div className={`${my ? styles.myMessage : styles.inMessage}`}>
         <p>{children}</p>
       </div>
     </div>

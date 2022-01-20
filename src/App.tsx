@@ -1,6 +1,6 @@
 import React from "react";
-import { Chat } from "./chat/Chat";
-import { Menu } from "./menu/Menu";
+import { Chat } from "./Chat/Chat";
+import { Menu } from "./Menu/Menu";
 import "./scss/App.scss";
 
 export const App: React.FC = (): JSX.Element => {

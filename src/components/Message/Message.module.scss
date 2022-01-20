@@ -1,0 +1,46 @@
+@use "../../scss/variables";
+
+@mixin container {
+  display: flex;
+  width: 100%;
+}
+
+@mixin message {
+  font-family: variables.$OpenSans;
+  font-weight: 500;
+  padding: 0 0.5rem;
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+
+.myContainer {
+  @include container();
+
+  justify-content: flex-end;
+}
+
+.myMessage {
+  @include message();
+  background-color: variables.$white;
+  border: 1px solid rgba(variables.$gray, 0.25);
+  box-shadow: 10px 10px 25px rgba(variables.$gray, 0.05),
+    15px 15px 35px rgba(variables.$gray, 0.05);
+  border-radius: 10px 10px 0px 10px;
+  color: variables.$gray;
+}
+
+.inContainer {
+  @include container();
+}
+
+.inMessage {
+  @include message();
+  background-color: variables.$active;
+  background: linear-gradient(90.54deg, #60a9f6 0%, #2a8bf2 100%);
+  box-shadow: 10px 10px 25px rgba(42, 139, 242, 0.1),
+    15px 15px 35px rgba(42, 139, 242, 0.05),
+    10px 10px 50px rgba(42, 139, 242, 0.1);
+  border-radius: 0px 10px 10px 10px;
+  color: variables.$white;
+  margin-left: 1rem;
+}

@@ -1,0 +1,21 @@
+@mixin avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+}
+
+.lg {
+  @include avatar;
+}
+
+.md {
+  @include avatar;
+  width: 55px;
+  height: 55px;
+}
+
+.sm {
+  @include avatar;
+  width: 40px;
+  width: 40px;
+}

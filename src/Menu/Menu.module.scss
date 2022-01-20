@@ -1,0 +1,14 @@
+@use "../scss/variables";
+
+.container {
+  height: 100vh;
+  width: 15%;
+  background-color: #fff;
+
+  .itemsContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

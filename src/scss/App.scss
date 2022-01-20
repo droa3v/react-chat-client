@@ -353,10 +353,20 @@ template {
 /**************************************************************************************************************************************************************/
 
 html {
-  font-family: variables.$Inter;
+  font-family: variables.$OpenSans;
 }
 
 .appContainer {
   display: flex;
   justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(variables.$dark, 0.3);
+  border-radius: 50px;
 }
