@@ -359,6 +359,7 @@ html {
 .appContainer {
   display: flex;
   justify-content: space-between;
+  background-color: variables.$background;
 }
 
 ::-webkit-scrollbar {
