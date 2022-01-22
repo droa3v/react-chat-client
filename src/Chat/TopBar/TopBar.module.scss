@@ -5,20 +5,17 @@
   align-content: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1rem;
+  padding: 1em;
   background-color: variables.$lightBg;
   border-bottom: 3px solid rgba(112, 124, 151, 0.15);
+  border-radius: 5px 5px;
   box-sizing: border-box;
-  padding: 0.3rem 1rem;
+  padding: 0.3em 1em;
   .infoWrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
-    .info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem;
+    & div:last-child {
+      padding: 1em;
       line-height: 1.5rem;
       .name {
         font-weight: 700;
@@ -29,12 +26,13 @@
       }
     }
   }
+
   .buttonsWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    width: 6rem;
+    padding: 1em;
+    width: 100px;
     .button {
       display: flex;
       justify-content: center;

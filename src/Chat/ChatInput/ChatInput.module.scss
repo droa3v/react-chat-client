@@ -1,48 +1,37 @@
 @use "../../scss/variables";
 
 .container {
-  width: 100%;
+  width: 85%;
+  border-top: 3px solid rgba(112, 124, 151, 0.15);
+  padding: 0 0.5em;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  .innerwrapper {
-    border-top: 3px solid rgba(112, 124, 151, 0.15);
-    display: flex;
-    align-items: center;
-    background-color: variables.$white;
-    box-sizing: border-box;
-    padding: 0 1rem;
-    width: 85%;
+  align-self: center;
+
+  .input {
+    border: none;
+    padding: 1em;
+    flex-grow: 1;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .emoji {
+    color: variables.$gray;
+    font-size: 1rem;
     align-self: center;
-    margin: 0;
-    .input {
-      border: none;
-      padding: 2rem;
-      flex-grow: 1;
-      &:focus {
-        outline: none;
-      }
-    }
+    padding: 0.5em;
+  }
 
-    .icon {
-      width: 15px;
-      height: 15px;
-    }
-
-    .emoji {
-      color: variables.$gray;
-      width: 20px;
-      height: 20px;
-      margin-right: 1rem;
-    }
-
-    .button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      font-size: 1rem;
-    }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 }

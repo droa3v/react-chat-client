@@ -66,6 +66,7 @@ export const Menu: React.FC = (): JSX.Element => {
         </ul>
       </nav>
 
+      {clicked && <div className={styles.darkBackground}></div>}
       <FontAwesomeIcon
         onClick={handleClick}
         icon={faAngleDoubleRight}

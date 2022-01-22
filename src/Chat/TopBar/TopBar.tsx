@@ -10,9 +10,9 @@ export const TopBar: React.FC = (): JSX.Element => {
   return (
     <div className={styles.container}>
       <div className={styles.infoWrapper}>
-        <Avatar src={img} size="lg" />
-        <div className={styles.info}>
-          <span className={styles.name}>Jane Doe</span>
+        <Avatar src={img} size="md" />
+        <div>
+          <span className={styles.name}>Jane Doe</span> <br />
           <span className={styles.online}>last seen 5 minutes ago...</span>
         </div>
       </div>

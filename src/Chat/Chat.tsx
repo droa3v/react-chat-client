@@ -7,11 +7,9 @@ import { TopBar } from "./TopBar/TopBar";
 export const Chat: React.FC = (): JSX.Element => {
   return (
     <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <TopBar />
-        <Messages />
-        <ChatInput />
-      </div>
+      <TopBar />
+      <Messages />
+      <ChatInput />
     </div>
   );
 };
