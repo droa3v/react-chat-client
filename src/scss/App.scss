@@ -360,6 +360,7 @@ html {
   display: flex;
   min-height: 100vh;
   background-color: variables.$background;
+  gap: 20px;
 }
 
 ::-webkit-scrollbar {

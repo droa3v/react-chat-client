@@ -8,6 +8,7 @@ interface ButtonProps {
   rounded?: boolean;
   className?: string;
   secondary?: boolean;
+  type?: "submit" | "reset" | "button";
 }
 
 interface ICoords {
@@ -22,6 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
   rounded,
   secondary,
   className,
+  type,
 }): JSX.Element => {
   const [coords, setCoords] = useState<ICoords>({ x: -1, y: -1 });
   const [isRippling, setIsRippling] = useState<boolean>(false);
@@ -48,6 +50,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={`${styles.btn} ${rounded ? styles.rounded : null}
       ${secondary ? styles.secondary : styles.primary}
       ${className}`}
+      type={type}
     >
       {isRippling ? (
         <span
